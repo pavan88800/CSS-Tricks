@@ -1,0 +1,65 @@
+.container-image {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative; /* important so child absolute elements stay inside */
+  z-index: 0;
+}
+
+img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: none;
+  z-index: 0;
+}
+
+.active {
+  display: block;
+}
+
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
+.next,
+.prev {
+  position: absolute;
+  margin: 5px;
+  top: 50%;
+  z-index: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 3;
+}
+
+.cricle-dots.bg-dots {
+  background-color: lightblue;
+}
+.cricle-dots {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
