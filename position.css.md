@@ -1,4 +1,4 @@
-## : 🧠 CSS position summary (your style, corrected)
+## 🧠 CSS position summary (your style, corrected)
 
 ## Static
 
