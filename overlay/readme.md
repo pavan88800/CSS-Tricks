@@ -108,17 +108,14 @@ img {
 .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
 }
 
 .prev {
-  left: 10px;
+  left: 0px;
 }
 
 .next {
-  right: 10px;
+  right: 0px;
 }
 
 .overlay {
