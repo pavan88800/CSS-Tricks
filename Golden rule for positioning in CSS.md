@@ -101,3 +101,43 @@ position: relative keeps element in normal flow but makes it an anchor for absol
 Always ask yourself:
 “Which parent will this absolutely positioned child be relative to?”
 If you can answer → your positioning will work perfectly.
+
+---
+
+## 🧠 Golden Rule:
+
+## Don’t add unnecessary <div> between the positioned parent and the positioned child.
+
+---
+
+## ❌ Bad:
+
+```js
+<div class="container-image"> <!-- relative -->
+  <div class="something">     <!-- unnecessary -->
+    <button class="prev">Prev</button> <!-- absolute -->
+  </div>
+</div>
+```
+
+In this case, button.prev won’t position properly unless .something also has position: relative.
+
+---
+
+## ✅ Good:
+
+```js
+<div class="container-image"> <!-- relative -->
+  <button class="prev">Prev</button> <!-- absolute -->
+</div>
+```
+
+This makes sure the button is positioned correctly inside the image container.
+
+---
+
+## 📌 Summary to Remember for Life:
+
+position: absolute → looks for the nearest positioned parent (relative, absolute, or fixed).
+
+Extra wrappers break the flow unless they also have position: relative.
